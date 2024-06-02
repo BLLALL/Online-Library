@@ -1,0 +1,795 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #e3cec5;
+    --secondcolor: rgb(95, 72, 61);
+}
+body {
+    background-color: var(--main-color);
+    text-align: right;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ---------------------------------------- */
+img {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+/* Header && Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #f1f1f1;
+    z-index: 999;
+}
+
+nav {
+    background-color: rgb(95, 72, 61);
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+
+.logo i {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 50px;
+    transition: 0.7s;
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+    animation-delay: 1s;
+}
+@keyframes slideleft {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: -50%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo h1 {
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 50px;
+    transition: 0.7s;
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+    animation-delay: 1s;
+}
+
+.logo h1:hover {
+    transform: scale(1.2);
+    color: rgb(29, 28, 28);
+}
+
+.logo i:hover {
+    transform: scale(1.2);
+    color: rgb(29, 28, 28);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav .container a {
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(29, 28, 28);
+}
+
+ul {
+    font-family: "Cairo", sans-serif;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    /* padding-left: 10px; */
+}
+ul li {
+    padding-right: 10px;
+}
+nav .container .special,
+.speciall {
+    background-color: rgb(149, 125, 113);
+    padding: 10px;
+    border-radius: 20px;
+    /* margin-right: 40px; */
+}
+
+.log {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    gap: 20px;
+}
+.lable {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    transform: translate(-5%, 156%);
+    margin-bottom: 30px;
+    font-family: "Cairo", sans-serif;
+    color: #583d33;
+}
+.lable .firsth {
+    margin: 0;
+    transform: translate(-33%, 35%);
+}
+.lable .sech {
+    margin: 0;
+    transform: translate(-18%, 89%);
+}
+.container .modifysec .options {
+    margin-top: 200px;
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/fr.png);
+    background-size: cover;
+}
+.container .modifysec .options .part1,
+.container .modifysec .options .part2,
+.container .modifysec .options .part3,
+.container .modifysec .options .part4{
+    display: flex;
+    justify-content: space-around;
+}
+.container .modifysec .options .part1 button,
+.container .modifysec .options .part2 button,
+.container .modifysec .options .part3 button,
+.container .modifysec .options .part4 button{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #c2a580;
+    width: 25%;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 50px;
+}
+.container .modifysec .options .part1 button:hover,
+.container .modifysec .options .part2 button:hover,
+.container .modifysec .options .part3 button:hover,
+.container .modifysec .options .part4 button:hover {
+    background-color: #dcd5d5;
+    transition-duration: 0.3s;
+}
+.addbook {
+    height: 105%;
+    transform: translateY(-65%);
+}
+.addbook form .klk {
+    transform: translateY(-10%);
+}
+.addbook form .klk .data1 label,
+.addbook form .klk .data2 label,
+.addbook form .klk .data3 label,
+.addbook form .klk .data4 label,
+.addbook form .klk .data5 label,
+.addbook form .klk .data6 label,
+.addbook form .klk .data7 label,
+.addaut form label ,
+.addAdmin form div label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Cairo", sans-serif;
+}
+.addbook form .klk .data1 input,
+.addbook form .klk .data2 input,
+.addbook form .klk .data3 input,
+.addbook form .klk .data4 input,
+.addbook form .klk .data5 input,
+.addbook form .klk .data6 input,
+.addbook form .klk .data7 input,
+.addaut form input,
+.addAdmin form div input {
+    /* display: block; */
+    width: 75%;
+    background-color: #f1f1f1;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: right;
+}
+.addbook form .klk textarea {
+    border: 1px solid;
+    border-radius: 10px;
+}
+.delbook button,
+.addcat button,
+.addaut form button, 
+.addAdmin form button{
+    width: 90px;
+    background-color: aliceblue;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Cairo", sans-serif;
+    margin-top: 5px;
+}
+.addbook form .klk button {
+    margin-top: -4px;
+    width: 90px;
+    background-color: aliceblue;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Cairo", sans-serif;
+}
+.addbook form .klk button:hover,
+.delbook button:hover,
+.addcat button:hover,
+.addaut form button:hover,
+.addAdmin form button:hover {
+    background-color: #bab0a3;
+    transition-duration: 0.5s;
+}
+/* ------------------------------------------- */
+.delbook {
+    height: 38%;
+    transform: translateY(-30%);
+}
+.delbook form div label {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Cairo", sans-serif;
+}
+.delbook form div input {
+    width: 75%;
+    background-color: #f1f1f1;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: right;
+}
+.addaut {
+    height: 40%;
+    transform: translateY(-25%);
+}
+.delbook form {
+    transform: translateY(-20%);
+}
+.addcat {
+    height: 200px;
+    transform: translateY(-24%);
+}
+.addcat form {
+    text-align: center;
+    transform: translateY(-30%);
+}
+.addcat form label {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Cairo", sans-serif;
+}
+.addcat form input {
+    width: 75%;
+    background-color: #f1f1f1;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: right;
+    padding: 5px;
+}
+.addaut form  , .addAdmin form {
+    transform: translateY(-20%);
+}
+
+/* -------------------------------------------------------------------- */
+footer {
+    font-family: "Cairo", sans-serif;
+    color: white;
+    background-color: var(--secondcolor);
+    margin-top: 30px;
+    padding: 10px 15px;
+}
+footer a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.flx ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.flx ul i {
+    margin: 0 10px;
+}
+.flx ul li {
+    transition: 0.5s;
+}
+.flx ul li:hover {
+    transform: scale(1.5);
+}
+.flx p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cpy {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+@media (width<= 790px) {
+    .flx ul {
+        flex-direction: column;
+    }
+    .card h5 {
+        font-size: 30px;
+    }
+}
+
+.mobile-menu {
+    position: relative;
+}
+
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 25px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(95, 72, 61);
+}
+
+.menu-items li {
+    margin-bottom: 10px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #000;
+}
+.card img {
+    height: 300px;
+}
+@media (width<955px) {
+    .lable .firsth,
+    .lable .sech {
+        font-size: 30px;
+        text-align: center;
+        transform: translate(4%, 215%);
+        font-weight: bold;
+    }
+    .modifysec {
+        width: 100%;
+        transform: translateX(0%);
+    }
+    .addbook .klk {
+        display: block;
+    }
+    /* done */
+    .container .modifysec .options .part1 button,
+    .container .modifysec .options .part2 button,
+    .container .modifysec .options .part3 button,
+    .container .modifysec .options .part4 button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        background-color: burlywood;
+        width: 25%;
+        height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid;
+        border-radius: 50px;
+    }
+    /* done */
+    .addbook form .klk .data1 label,
+    .addbook form .klk .data2 label,
+    .addbook form .klk .data3 label,
+    .addbook form .klk .data4 label,
+    .addbook form .klk .data5 label,
+    .addbook form .klk .data6 label,
+    .addbook form .klk .data7 label,
+    .addaut form label,
+    .addcat form label,
+    .delaut form label,
+    .delbook form div label,
+    .addAdmin form div input {
+        font-size: 18px;
+    }
+    /* done */
+    .addbook form .klk .data1 input,
+    .addbook form .klk .data2 input,
+    .addbook form .klk .data3 input,
+    .addbook form .klk .data4 input,
+    .addbook form .klk .data5 input,
+    .addbook form .klk .data6 input,
+    .addbook form .klk .data7 input,
+    .addaut form input,
+    .addcat form input,
+    .delaut form input,
+    .delbook form div input,
+    .addAdmin form div input  {
+        width: 70%;
+    }
+    .addbook {
+        height: 94%;
+        transform: translateY(-62%);
+    }
+    .addbook form textarea {
+        width: 80%;
+    }
+}
+@media (width<450px) {
+    .lable .firsth {
+        font-size: 25px;
+        text-align: center;
+        transform: translate(6%, 241%);
+        font-weight: bold;
+        margin-top: -15px;
+    }
+    .lable .sech {
+        font-size: 25px;
+        text-align: center;
+        transform: translate(4%, 283%);
+        font-weight: bold;
+    }
+}
+@media (width<380px) {
+    .lable .firsth {
+        font-size: 25px;
+        text-align: center;
+        transform: translate(6%, 155%);
+        font-weight: bold;
+        margin-top: -15px;
+    }
+    .lable .sech {
+        font-size: 25px;
+        text-align: center;
+        transform: translate(4%, 94%);
+        font-weight: bold;
+    }
+}
+/* Header && Navbar */
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background-color: #f1f1f1;
+    z-index: 999;
+}
+
+nav {
+    background-color: rgb(95, 72, 61);
+}
+
+.ba {
+    display: none;
+}
+.logo {
+    display: flex;
+    color: white;
+    /* overflow: hidden; */
+}
+
+.logo i {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 50px;
+    transition: 0.7s;
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+    animation-delay: 1s;
+}
+@keyframes slideleft {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: -50%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo h1 {
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 50px;
+    transition: 0.7s;
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+    animation-delay: 1s;
+    margin-top: 15px;
+}
+
+.logo h1:hover {
+    transform: scale(1.2);
+    color: rgb(29, 28, 28);
+}
+
+.logo i:hover {
+    transform: scale(1.2);
+    color: rgb(29, 28, 28);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .container a {
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(29, 28, 28);
+}
+
+ul {
+    font-family: "Cairo", sans-serif;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 0;
+}
+/* -------------------------- */
+
+@media (max-width: 991px) {
+    nav ul {
+        font-size: 15px;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 5px;
+    }
+    .logo i,
+    .logo h1 {
+        font-size: 25px;
+        margin-top: 15px;
+        font-size: 40px;
+    }
+}
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+    .ba {
+        display: block;
+    }
+    .logo i,
+    .logo h1,
+    .desc p {
+        font-size: 50px;
+    }
+}
+@media (width<=676px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+.mobile-menu {
+    position: relative;
+}
+
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 25px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(95, 72, 61);
+}
+
+.menu-items li {
+    margin-bottom: 10px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #000;
+}
+@media (max-width: 991px) {
+    nav ul {
+        font-size: 15px;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 5px;
+    }
+    .logo i,
+    .logo h1 {
+        font-size: 25px;
+        margin-top: 15px;
+        font-size: 40px;
+    }
+}
+@media (max-width: 991px) {
+    nav ul {
+        font-size: 15px;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 5px;
+    }
+    .logo i,
+    .logo h1 {
+        font-size: 25px;
+        margin-top: 15px;
+        font-size: 40px;
+    }
+}
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+    .ba {
+        display: block;
+    }
+    .logo i,
+    .logo h1,
+    .desc p {
+        font-size: 50px;
+    }
+}
+@media (width<=676px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+    .headimg h1 {
+        font-size: 40px;
+    }
+}
+/* Footer */
+footer {
+    font-family: "Cairo", sans-serif;
+    color: white;
+    background-color: var(--secondcolor);
+    margin-top: 30px;
+    padding: 10px 15px;
+}
+footer a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.flx ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.flx ul i {
+    margin: 0 10px;
+}
+.flx ul li {
+    transition: 0.5s;
+}
+.flx ul li:hover {
+    transform: scale(1.5);
+}
+.flx p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cpy {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
